@@ -29,7 +29,7 @@ class HeroExampleViewController: UIViewController, StoryboardInitializable {
         pickerView.delegate = self
     }
     @IBAction func close(_ sender: Any) {
-        self.hero.dismissViewController()
+        self.hero.unwindToRootViewController()
     }
     @IBAction func presentTap(_ sender: Any) {
         let toView = HeroExampleViewController.initFromStoryboard(name: "Main")
