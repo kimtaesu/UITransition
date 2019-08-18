@@ -27,6 +27,7 @@ class HeroExampleViewController: UIViewController, StoryboardInitializable {
         super.viewDidLoad()
         pickerView.dataSource = self
         pickerView.delegate = self
+        navigationItem.title = "Hero"
     }
     @IBAction func close(_ sender: Any) {
         self.hero.unwindToRootViewController()
@@ -47,15 +48,13 @@ class HeroExampleViewController: UIViewController, StoryboardInitializable {
         self.navigationController?.pushViewController(toView, animated: true)
     }
 
-    var currentSelectedIndex = true
     @IBAction func tabbarTap(_ sender: Any) {
         let toView = HeroExampleViewController.initFromStoryboard(name: "Main")
         toView.hero.isEnabled = true
         toView.view.backgroundColor = colors.randomElement()
         self.tabBarController?.hero.isEnabled = true
         self.tabBarController?.hero.tabBarAnimationType = pickerItem[self.selectedRow ?? 0]?.1 ?? .fade
-        self.tabBarController?.selectedIndex = currentSelectedIndex ? 1 : 0
-        currentSelectedIndex = !currentSelectedIndex
+        self.tabBarController!.selectedIndex = self.tabBarController!.selectedIndex == 0 ? 1 : 0
     }
 }
 

@@ -31,7 +31,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Custom"/>
                                 <connections>
-                                    <segue destination="L72-2F-F5m" kind="presentation" id="22M-NA-WIT"/>
+                                    <segue destination="4i1-XG-dWb" kind="show" id="DXX-3Z-h3S"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -126,20 +126,78 @@
             </objects>
             <point key="canvasLocation" x="2343" y="-199"/>
         </scene>
-        <!--Custom View Controller-->
-        <scene sceneID="fhi-0J-FXF">
+        <!--Item 2-->
+        <scene sceneID="YOx-de-BmH">
             <objects>
-                <viewController id="L72-2F-F5m" customClass="CustomViewController" customModule="UITransition" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GCX-eC-SkI">
+                <viewController storyboardIdentifier="CustomViewController" id="8wc-Gd-dXZ" customClass="CustomViewController" customModule="UITransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xcy-vx-mgu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXm-he-v5a">
+                                <rect key="frame" x="176" y="244" width="62" height="30"/>
+                                <state key="normal" title="UITabbar"/>
+                                <connections>
+                                    <action selector="tabTap:" destination="8wc-Gd-dXZ" eventType="touchUpInside" id="l0g-5O-7E4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzo-Nd-2rD">
+                                <rect key="frame" x="180.5" y="108" width="53" height="30"/>
+                                <state key="normal" title="Present"/>
+                                <connections>
+                                    <action selector="presentTap:" destination="8wc-Gd-dXZ" eventType="touchUpInside" id="M9t-tZ-u0z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ljz-3k-xY0">
+                                <rect key="frame" x="355" y="100" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="close:" destination="8wc-Gd-dXZ" eventType="touchUpInside" id="TeT-ek-tIG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc1-9z-MK2">
+                                <rect key="frame" x="166" y="171" width="88" height="30"/>
+                                <state key="normal" title="UINavigation"/>
+                                <connections>
+                                    <action selector="navigationTap:" destination="8wc-Gd-dXZ" eventType="touchUpInside" id="Irs-5j-VzU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="JeJ-0c-6lw"/>
+                        <constraints>
+                            <constraint firstItem="vXm-he-v5a" firstAttribute="centerX" secondItem="mpb-WK-QOB" secondAttribute="centerX" id="3wl-s2-kLZ"/>
+                            <constraint firstItem="Kzo-Nd-2rD" firstAttribute="centerX" secondItem="mpb-WK-QOB" secondAttribute="centerX" id="MhI-h9-xIa"/>
+                            <constraint firstItem="Sc1-9z-MK2" firstAttribute="centerX" secondItem="mpb-WK-QOB" secondAttribute="centerX" id="bxn-mQ-xzh"/>
+                            <constraint firstItem="vXm-he-v5a" firstAttribute="top" secondItem="mpb-WK-QOB" secondAttribute="top" constant="156" id="cHM-Bb-p4j"/>
+                            <constraint firstItem="Kzo-Nd-2rD" firstAttribute="top" secondItem="mpb-WK-QOB" secondAttribute="top" constant="20" id="d00-vC-W8F"/>
+                            <constraint firstItem="Sc1-9z-MK2" firstAttribute="top" secondItem="Kzo-Nd-2rD" secondAttribute="bottom" constant="33" id="hGs-Tx-SPd"/>
+                            <constraint firstItem="mpb-WK-QOB" firstAttribute="trailing" secondItem="Ljz-3k-xY0" secondAttribute="trailing" constant="20" id="sEn-5c-XV5"/>
+                            <constraint firstItem="Ljz-3k-xY0" firstAttribute="top" secondItem="mpb-WK-QOB" secondAttribute="top" constant="12" id="tnE-eR-xet"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mpb-WK-QOB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Vwa-mh-k8k"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MfW-d1-eEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJY-hd-4zH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2210" y="632"/>
+            <point key="canvasLocation" x="3316" y="661"/>
+        </scene>
+        <!--Custom Tabbar View Controller-->
+        <scene sceneID="Xuk-uj-tSL">
+            <objects>
+                <tabBarController id="4i1-XG-dWb" customClass="CustomTabbarViewController" customModule="UITransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DnH-NK-aRU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8wc-Gd-dXZ" kind="relationship" relationship="viewControllers" id="x7J-X9-WA5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VAu-yS-CP8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2322" y="507"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zxf-M9-0ND">
