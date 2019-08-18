@@ -10,7 +10,7 @@
 import UIKit
 import Hero
 class HeroExampleViewController: UIViewController, StoryboardInitializable {
-    
+
     @IBOutlet weak var pickerView: UIPickerView!
     private var selectedRow: Int?
     private var pickerItem: [Int: (String, HeroDefaultAnimationType)] = [
@@ -20,13 +20,16 @@ class HeroExampleViewController: UIViewController, StoryboardInitializable {
         3: ("pull down", .pull(direction: .down)),
         4: ("slide down", .slide(direction: .down))
     ]
-    
+
     private let colors = [UIColor.red, UIColor.cyan, UIColor.orange, UIColor.green, UIColor.magenta, UIColor.yellow, UIColor.brown, UIColor.darkGray]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.dataSource = self
         pickerView.delegate = self
+    }
+    @IBAction func close(_ sender: Any) {
+        self.hero.dismissViewController()
     }
     @IBAction func presentTap(_ sender: Any) {
         let toView = HeroExampleViewController.initFromStoryboard(name: "Main")
@@ -35,6 +38,25 @@ class HeroExampleViewController: UIViewController, StoryboardInitializable {
         toView.view.backgroundColor = colors.randomElement()
         self.present(toView, animated: true)
     }
+    @IBAction func pushTap(_ sender: Any) {
+        let toView = HeroExampleViewController.initFromStoryboard(name: "Main")
+        toView.hero.isEnabled = true
+        toView.view.backgroundColor = colors.randomElement()
+        self.navigationController?.hero.isEnabled = true
+        self.navigationController?.hero.navigationAnimationType = pickerItem[self.selectedRow ?? 0]?.1 ?? .fade
+        self.navigationController?.pushViewController(toView, animated: true)
+    }
+
+    var currentSelectedIndex = true
+    @IBAction func tabbarTap(_ sender: Any) {
+        let toView = HeroExampleViewController.initFromStoryboard(name: "Main")
+        toView.hero.isEnabled = true
+        toView.view.backgroundColor = colors.randomElement()
+        self.tabBarController?.hero.isEnabled = true
+        self.tabBarController?.hero.tabBarAnimationType = pickerItem[self.selectedRow ?? 0]?.1 ?? .fade
+        self.tabBarController?.selectedIndex = currentSelectedIndex ? 1 : 0
+        currentSelectedIndex = !currentSelectedIndex
+    }
 }
 
 
@@ -42,7 +64,7 @@ extension HeroExampleViewController: UIPickerViewDataSource, UIPickerViewDelegat
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerItem.count
     }

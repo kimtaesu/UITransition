@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Hero"/>
                                 <connections>
-                                    <segue destination="SMK-z3-JOZ" kind="show" id="Mgb-IM-m0j"/>
+                                    <segue destination="JgR-3J-1Kt" kind="show" id="2Uz-3Q-4f9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mf4-Jw-YNY">
@@ -44,42 +44,87 @@
             </objects>
             <point key="canvasLocation" x="1284" y="250"/>
         </scene>
-        <!--Hero Example View Controller-->
-        <scene sceneID="RK8-gS-Ga3">
+        <!--Item 1-->
+        <scene sceneID="dqa-IS-inn">
             <objects>
-                <viewController storyboardIdentifier="HeroExampleViewController" id="SMK-z3-JOZ" customClass="HeroExampleViewController" customModule="UITransition" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Vtq-2E-ru4">
+                <viewController storyboardIdentifier="HeroExampleViewController" id="Axb-xw-B0Q" customClass="HeroExampleViewController" customModule="UITransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AfM-jN-uH2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uz-84-EPZ">
-                                <rect key="frame" x="180.5" y="114" width="53" height="30"/>
-                                <state key="normal" title="Present"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPp-9c-Xe5">
+                                <rect key="frame" x="173" y="126" width="68" height="30"/>
+                                <state key="normal" title="UIPresent"/>
                                 <connections>
-                                    <action selector="presentTap:" destination="SMK-z3-JOZ" eventType="touchUpInside" id="ESh-Lq-Cq7"/>
+                                    <action selector="presentTap:" destination="Axb-xw-B0Q" eventType="touchUpInside" id="ttk-Wp-YtV"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfW-3C-KtD">
-                                <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuP-0i-fAH">
+                                <rect key="frame" x="47" y="597" width="320" height="216"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLV-Sm-MqL">
+                                <rect key="frame" x="163" y="179" width="88" height="30"/>
+                                <state key="normal" title="UINavigation"/>
+                                <connections>
+                                    <action selector="pushTap:" destination="Axb-xw-B0Q" eventType="touchUpInside" id="170-rv-Jyu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iio-Q0-9Ft">
+                                <rect key="frame" x="355" y="97" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="close:" destination="Axb-xw-B0Q" eventType="touchUpInside" id="GWC-QY-crG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-vQ-pN1">
+                                <rect key="frame" x="176" y="240" width="62" height="30"/>
+                                <state key="normal" title="UITabbar"/>
+                                <connections>
+                                    <action selector="tabbarTap:" destination="Axb-xw-B0Q" eventType="touchUpInside" id="WNf-y1-ORz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2uz-84-EPZ" firstAttribute="top" secondItem="2MM-we-ceE" secondAttribute="top" constant="26" id="091-JH-cnO"/>
-                            <constraint firstItem="2MM-we-ceE" firstAttribute="bottom" secondItem="tfW-3C-KtD" secondAttribute="bottom" id="FtN-hG-1lZ"/>
-                            <constraint firstItem="2MM-we-ceE" firstAttribute="trailing" secondItem="tfW-3C-KtD" secondAttribute="trailing" id="Mls-lX-OZL"/>
-                            <constraint firstItem="2uz-84-EPZ" firstAttribute="centerX" secondItem="2MM-we-ceE" secondAttribute="centerX" id="e1p-Y4-BFG"/>
-                            <constraint firstItem="tfW-3C-KtD" firstAttribute="leading" secondItem="2MM-we-ceE" secondAttribute="leading" id="xxt-oB-PQQ"/>
+                            <constraint firstItem="tuP-0i-fAH" firstAttribute="centerX" secondItem="BNw-vL-f98" secondAttribute="centerX" id="AuN-C2-tdG"/>
+                            <constraint firstItem="BNw-vL-f98" firstAttribute="bottom" secondItem="tuP-0i-fAH" secondAttribute="bottom" id="Cqh-v1-sQR"/>
+                            <constraint firstItem="BNw-vL-f98" firstAttribute="trailing" secondItem="iio-Q0-9Ft" secondAttribute="trailing" constant="20" id="D5i-xZ-qTH"/>
+                            <constraint firstItem="aLV-Sm-MqL" firstAttribute="centerX" secondItem="bPp-9c-Xe5" secondAttribute="centerX" id="DGn-do-Cyq"/>
+                            <constraint firstItem="jJI-vQ-pN1" firstAttribute="top" secondItem="aLV-Sm-MqL" secondAttribute="bottom" constant="31" id="ObA-1i-al7"/>
+                            <constraint firstItem="iio-Q0-9Ft" firstAttribute="top" secondItem="BNw-vL-f98" secondAttribute="top" constant="9" id="frF-9f-mZc"/>
+                            <constraint firstItem="jJI-vQ-pN1" firstAttribute="centerX" secondItem="BNw-vL-f98" secondAttribute="centerX" id="ggB-AD-VNk"/>
+                            <constraint firstItem="aLV-Sm-MqL" firstAttribute="top" secondItem="bPp-9c-Xe5" secondAttribute="bottom" constant="23" id="nCY-6b-fle"/>
+                            <constraint firstItem="bPp-9c-Xe5" firstAttribute="top" secondItem="BNw-vL-f98" secondAttribute="top" constant="38" id="pMn-tW-I6b"/>
+                            <constraint firstItem="aLV-Sm-MqL" firstAttribute="centerX" secondItem="BNw-vL-f98" secondAttribute="centerX" id="qGa-Sb-m29"/>
+                            <constraint firstItem="bPp-9c-Xe5" firstAttribute="centerX" secondItem="BNw-vL-f98" secondAttribute="centerX" id="zQz-mI-t0Q"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="2MM-we-ceE"/>
+                        <viewLayoutGuide key="safeArea" id="BNw-vL-f98"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="tay-PQ-24w"/>
                     <connections>
-                        <outlet property="pickerView" destination="tfW-3C-KtD" id="Oha-0J-n5j"/>
+                        <outlet property="pickerView" destination="tuP-0i-fAH" id="84Z-8C-RIR"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yLk-rI-Px2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z9c-Pp-fPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2265" y="-62"/>
+            <point key="canvasLocation" x="3263" y="-523"/>
+        </scene>
+        <!--Hero Tabbar View Controller-->
+        <scene sceneID="GZd-gv-Hns">
+            <objects>
+                <tabBarController id="JgR-3J-1Kt" customClass="HeroTabbarViewController" customModule="UITransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3hS-dm-vKu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Axb-xw-B0Q" kind="relationship" relationship="viewControllers" id="4DP-dQ-chH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O0E-vm-ncg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2343" y="-199"/>
         </scene>
         <!--Custom View Controller-->
         <scene sceneID="fhi-0J-FXF">

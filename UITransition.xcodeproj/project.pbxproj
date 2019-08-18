@@ -19,6 +19,7 @@
 		BD69AB7F2309016C0079B1FC /* HeroExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69AB7E2309016C0079B1FC /* HeroExampleViewController.swift */; };
 		BD69AB81230901890079B1FC /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69AB80230901890079B1FC /* CustomViewController.swift */; };
 		BD69AB87230905F40079B1FC /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69AB86230905F40079B1FC /* StoryboardInitializable.swift */; };
+		BD69AB89230913F80079B1FC /* HeroTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69AB88230913F80079B1FC /* HeroTabbarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		BD69AB7E2309016C0079B1FC /* HeroExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroExampleViewController.swift; sourceTree = "<group>"; };
 		BD69AB80230901890079B1FC /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		BD69AB86230905F40079B1FC /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
+		BD69AB88230913F80079B1FC /* HeroTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTabbarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				BD69AB7E2309016C0079B1FC /* HeroExampleViewController.swift */,
+				BD69AB88230913F80079B1FC /* HeroTabbarViewController.swift */,
 			);
 			path = Hero;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				BD69AB81230901890079B1FC /* CustomViewController.swift in Sources */,
 				BD69AB5C2308FF010079B1FC /* AppDelegate.swift in Sources */,
 				BD69AB7F2309016C0079B1FC /* HeroExampleViewController.swift in Sources */,
+				BD69AB89230913F80079B1FC /* HeroTabbarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
