@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CustomPresentSlideAnimatedTransitioning: NSObject,  UIViewControllerAnimatedTransitioning {
+final class SlideInAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     func transitionDuration(using ctx: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 1

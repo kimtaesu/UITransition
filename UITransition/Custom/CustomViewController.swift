@@ -38,12 +38,12 @@ class CustomViewController: UIViewController, StoryboardInitializable {
 
 extension CustomViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CustomPresentSlideAnimatedTransitioning()
+        return SlideInAnimator()
     }
 }
 
 extension CustomViewController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CustomPresentSlideAnimatedTransitioning()
+        return SlideInAnimator()
     }
 }

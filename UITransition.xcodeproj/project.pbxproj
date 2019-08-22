@@ -21,8 +21,7 @@
 		BD69AB87230905F40079B1FC /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69AB86230905F40079B1FC /* StoryboardInitializable.swift */; };
 		BD69AB89230913F80079B1FC /* HeroTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69AB88230913F80079B1FC /* HeroTabbarViewController.swift */; };
 		BD69AB8B23091B370079B1FC /* CustomTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69AB8A23091B370079B1FC /* CustomTabbarViewController.swift */; };
-		BD69AB8F23092CE30079B1FC /* CustomPresentFadeAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69AB8E23092CE30079B1FC /* CustomPresentFadeAnimatedTransitioning.swift */; };
-		BD69AB9123092D580079B1FC /* CustomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69AB9023092D580079B1FC /* CustomNavigation.swift */; };
+		BD69AB8F23092CE30079B1FC /* SlideInAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69AB8E23092CE30079B1FC /* SlideInAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +57,7 @@
 		BD69AB86230905F40079B1FC /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
 		BD69AB88230913F80079B1FC /* HeroTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTabbarViewController.swift; sourceTree = "<group>"; };
 		BD69AB8A23091B370079B1FC /* CustomTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarViewController.swift; sourceTree = "<group>"; };
-		BD69AB8E23092CE30079B1FC /* CustomPresentFadeAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentFadeAnimatedTransitioning.swift; sourceTree = "<group>"; };
-		BD69AB9023092D580079B1FC /* CustomNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigation.swift; sourceTree = "<group>"; };
+		BD69AB8E23092CE30079B1FC /* SlideInAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +140,7 @@
 			children = (
 				BD69AB80230901890079B1FC /* CustomViewController.swift */,
 				BD69AB8A23091B370079B1FC /* CustomTabbarViewController.swift */,
-				BD69AB8E23092CE30079B1FC /* CustomPresentFadeAnimatedTransitioning.swift */,
-				BD69AB9023092D580079B1FC /* CustomNavigation.swift */,
+				BD69AB8E23092CE30079B1FC /* SlideInAnimator.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -341,14 +338,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD69AB9123092D580079B1FC /* CustomNavigation.swift in Sources */,
 				BD69AB642308FF010079B1FC /* UITransition.xcdatamodeld in Sources */,
 				BD69AB5E2308FF010079B1FC /* ViewController.swift in Sources */,
 				BD69AB8B23091B370079B1FC /* CustomTabbarViewController.swift in Sources */,
 				BD69AB87230905F40079B1FC /* StoryboardInitializable.swift in Sources */,
 				BD69AB81230901890079B1FC /* CustomViewController.swift in Sources */,
 				BD69AB5C2308FF010079B1FC /* AppDelegate.swift in Sources */,
-				BD69AB8F23092CE30079B1FC /* CustomPresentFadeAnimatedTransitioning.swift in Sources */,
+				BD69AB8F23092CE30079B1FC /* SlideInAnimator.swift in Sources */,
 				BD69AB7F2309016C0079B1FC /* HeroExampleViewController.swift in Sources */,
 				BD69AB89230913F80079B1FC /* HeroTabbarViewController.swift in Sources */,
 			);

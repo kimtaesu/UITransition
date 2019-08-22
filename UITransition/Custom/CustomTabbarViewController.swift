@@ -30,6 +30,6 @@ class CustomTabbarViewController: UITabBarController {
 
 extension CustomTabbarViewController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CustomPresentSlideAnimatedTransitioning()
+        return SlideInAnimator()
     }
 }
